@@ -149,7 +149,7 @@ resource "aws_route53_zone" "primary" {
 resource "aws_route53_record" "www" {
   zone_id = aws_route53_zone.primary.zone_id
   name    = var.aws_route53_record_www_name
-  type    = var.aws_route53_record_www_type
+  type    = var.aws_route53_record_type
 
   alias {
     name                   = aws_lb.ec2_alb.dns_name
